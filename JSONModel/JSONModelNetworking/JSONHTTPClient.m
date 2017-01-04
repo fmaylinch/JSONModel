@@ -277,11 +277,17 @@ static NSString* requestContentType = nil;
     RequestResultBlock handler = ^(NSData *responseData, JSONModelError *error) {
         id jsonObject = nil;
 
-        //step 3: if there's no response so far, return a basic error
+        NSLog(@"fixed method from forked repo");
+
+        /*
+          step 3: if there's no response so far, return a basic error
+          TODO: I think this is wrong, sometimes there's no data but no error either
+
         if (!responseData && !error) {
             //check for false response, but no network error
             error = [JSONModelError errorBadResponse];
         }
+        */
 
         //step 4: if there's a response at this and no errors, convert to object
         if (error==nil) {

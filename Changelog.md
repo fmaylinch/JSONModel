@@ -1,6 +1,10 @@
 Change-log
 ==========
 
+**Version 1.2.1** @2017-01-04
+
+- bug fix when correct HTTP response has no data
+
 **Version 1.2.0** @2015-12-30
 
 - support added for watchOS and tvOS
