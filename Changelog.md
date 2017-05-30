@@ -1,6 +1,10 @@
 Change-log
 ==========
 
+**Version 1.2.2** @2017-05-30
+
+- Skip ignored property before checking it
+
 **Version 1.2.1** @2017-01-04
 
 - bug fix when correct HTTP response has no data

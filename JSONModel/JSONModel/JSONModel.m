@@ -581,7 +581,12 @@ static JSONKeyMapper* globalKeyMapper = nil;
             const char *attrs = property_getAttributes(property);
             NSString* propertyAttributes = @(attrs);
             NSArray* attributeItems = [propertyAttributes componentsSeparatedByString:@","];
-            
+
+            NSString *nsPropertyName = @(propertyName);
+            if([[self class] propertyIsIgnored:nsPropertyName]){
+                continue; //to next property
+            }
+
             //ignore read-only properties
             if ([attributeItems containsObject:@"R"]) {
                 continue; //to next property
@@ -668,15 +673,10 @@ static JSONKeyMapper* globalKeyMapper = nil;
 
             }
 
-            NSString *nsPropertyName = @(propertyName);
             if([[self class] propertyIsOptional:nsPropertyName]){
                 p.isOptional = YES;
             }
             
-            if([[self class] propertyIsIgnored:nsPropertyName]){
-                p = nil;
-            }
-
             NSString* customProtocol = [[self class] protocolForArrayProperty:nsPropertyName];
             if (customProtocol) {
                 p.protocol = customProtocol;

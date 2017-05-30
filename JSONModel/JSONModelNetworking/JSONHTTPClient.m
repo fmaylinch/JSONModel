@@ -277,8 +277,6 @@ static NSString* requestContentType = nil;
     RequestResultBlock handler = ^(NSData *responseData, JSONModelError *error) {
         id jsonObject = nil;
 
-        NSLog(@"fixed method from forked repo");
-
         /*
           step 3: if there's no response so far, return a basic error
           TODO: I think this is wrong, sometimes there's no data but no error either
