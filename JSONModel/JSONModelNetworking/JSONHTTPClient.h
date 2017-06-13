@@ -23,6 +23,8 @@
  */
 extern NSString* const kHTTPMethodGET;
 extern NSString* const kHTTPMethodPOST;
+extern NSString* const kHTTPMethodPUT;
+extern NSString* const kHTTPMethodDELETE;
 
 /**
  * Content-type strings

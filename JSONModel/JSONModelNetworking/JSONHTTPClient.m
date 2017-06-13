@@ -21,6 +21,8 @@ typedef void (^RequestResultBlock)(NSData *data, JSONModelError *error);
 #pragma mark - constants
 NSString* const kHTTPMethodGET = @"GET";
 NSString* const kHTTPMethodPOST = @"POST";
+NSString* const kHTTPMethodPUT = @"PUT";
+NSString* const kHTTPMethodDELETE = @"DELETE";
 
 NSString* const kContentTypeAutomatic    = @"jsonmodel/automatic";
 NSString* const kContentTypeJSON         = @"application/json";

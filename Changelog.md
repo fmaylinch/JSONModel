@@ -1,6 +1,10 @@
 Change-log
 ==========
 
+**Version 1.2.3** @2017-06-13
+
+- Add kHTTPMethodPUT and kHTTPMethodDELETE constants
+
 **Version 1.2.2** @2017-05-30
 
 - Skip ignored property before checking it
